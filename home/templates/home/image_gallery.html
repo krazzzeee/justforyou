@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+</head>
+<body>
+
+<!-- About Section -->
+<section id="about" class="about  content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="box">
+
+                <div class="row">
+                    <h2 class="section-heading" style="padding-bottom: 30px;">Image Gallery</h2>
+                </div>
+                <div id="links">
+
+                {% for img in image_links %}
+                    <div class="col-lg-3">
+                        <div class="thumbnail well">
+                            <a href="{{ STATIC_URL  }}images/about-pics/about-1.jpg" title="about1" data-gallery>
+                                <img class="img-responsive" src="{{ STATIC_URL }}images/about-pics/about-1.jpg" alt="about1"  >
+                            </a>
+                            <p class="caption">This is a caption</p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+{#                    <div class="col-lg-3 ">#}
+{#                        <div class="thumbnail">#}
+{#                            <a href="{{ STATIC_URL  }}images/about-pics/about-2.jpg" title="about2" data-gallery>#}
+{#                                <img class="img-responsive"  src="{{ STATIC_URL  }}images/about-pics/about-2.jpg" alt="about2" >#}
+{#                            </a>#}
+{#                            <p class="caption">This is a caption</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-lg-3">#}
+{#                        <div class="thumbnail">#}
+{#                            <a href="{{ STATIC_URL  }}images/about-pics/about-3.png" title="about3" data-gallery>#}
+{#                                <img class="img-responsive" src="{{ STATIC_URL  }}images/about-pics/about-3.png" alt="about3" >#}
+{#                            </a>#}
+{#                            <p class="caption">This is a caption</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                    <div class="col-lg-3">#}
+{#                        <div class="thumbnail">#}
+{#                            <a href="{{STATIC_URL}}images/about-pics/about-4.png" title="about4" data-gallery>#}
+{#                                <img class="img-responsive" src="{{STATIC_URL}}images/about-pics/about-4.png" alt="about4"   >#}
+{#                            </a>#}
+{#                            <p class="caption">This is a caption</p>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+     FAQ
+{% endblock title %}
+
+
+{% block styles %}
+    {{ block.super }}
+{% endblock styles %}
+
+
+{% block scripts %}
+{#    {{ block.super }}#}
+{% endblock scripts %}
+
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+{% block header %}
+{% endblock header %}
+
+
+{% block menu %}
+    {% include "tabs.html"  %}
+{% endblock menu %}
+
+
+{%  block content %}
+{% endblock content %}
+

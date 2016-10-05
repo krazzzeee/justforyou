@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+{#    <link rel="icon" href="/favicon.ico">#}
+    {# needed for apple devices. do not remove this. #}
+{#    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>#}
+
+    <title>{% block title %} Just For You {% endblock %}</title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% block styles %}
+        <link href="{{ STATIC_URL }}startbootstrap-business-casual-1.0.4/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}startbootstrap-business-casual-1.0.4/css/business-casual.css" rel="stylesheet">
+        <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="{{ STATIC_URL }}startbootstrap-business-casual-1.0.4/css/business-casual.css" rel="stylesheet">
+
+        <!-- Image Gallery -->
+{#        <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">#}
+{#        <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap-image-gallery-3.4.2/css/bootstrap-image-gallery.min.css">#}
+
+        <!-- Custom Fonts -->
+        <link href="{{ STATIC_URL }}startbootstrap-grayscale-1.0.6/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+        <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    {% endblock styles %}
+
+</head>
+
+{#<body data-spy="scroll" data-target=".subnav" data-offset="50">#}
+<body>
+<div class="brand">Just For You</div>
+<div class="address-bar">West Royalty Business Park | 51 Watts Avenue | Charlottetown, PE  C1E 2B7 | (902) 629-1226</div>
+
+{% block header %}
+{#    <div class="brand">Just For You</div>#}
+{#    <div class="address-bar">West Royalty Business Park | 51 Watts Avenue | Charlottetown, PE  C1E 2B7 | (902) 629-1226</div>#}
+{% endblock header %}
+
+
+{% block menu %}
+    {% include "tabs.html" with active_tab='tab1' %}
+{#    {% include "tabs.html" %}#}
+{% endblock menu %}
+
+<div class="container" style="margin-bottom:20px;">
+    <div class="content">
+        <div class="page-header">
+
+{#            {% block logo %}#}
+{#                <img class="top-logo"#}
+{#                     src="/static/vermont-logo-small.png"/>#}
+{#            {% endblock %}#}
+
+            <h1>{% block content_title %} {% endblock %}</h1>
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    {% block footer %}
+        {#        <div class="row">#}
+        {#            <div class="span12">&nbsp;</div>#}
+        {#        </div>#}
+        {#        <div class="row">#}
+        {#            <div class="span6">#}
+        {#                {% if branding.logo_path %}#}
+        {#                    <div class="login-logo" style="margin-left:0px !important;"></div>#}
+        {#                {% else %}#}
+        {#                    <div class="login-logo" style=""></div>#}
+        {#                    <!--<img src="{{ STATIC_URL }}branding/mjl-logo-new2.png">-->#}
+        {#                {% endif %}#}
+        {##}
+        {#            </div>#}
+        {#        </div>#}
+    {% endblock footer %}
+</div>
+<!--js -->
+{% block scripts %}
+    <!-- jQuery -->
+    <script src="{{ STATIC_URL }}startbootstrap-grayscale-1.0.6/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ STATIC_URL }}startbootstrap-grayscale-1.0.6/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ STATIC_URL }}startbootstrap-grayscale-1.0.6/js/jquery.easing.min.js"></script>
+    <script src="{{ STATIC_URL }}startbootstrap-agency-1.0.6/js/agency.js"></script>
+    <script src="{{ STATIC_URL }}startbootstrap-business-casual-1.0.4/js/jquery.js"></script>
+    <!-- Custom Theme JavaScript -->
+{#    <script src="{{ STATIC_URL }}startbootstrap-grayscale-1.0.6/js/grayscale.js"></script>#}
+
+    <!-- Image Gallery -->
+    {#    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>#}
+    {#    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>#}
+    {#    <script src="{{ STATIC_URL }}bootstrap-image-gallery-3.4.2/js/bootstrap-image-gallery.min.css"></script>#}
+
+    <script src="{{ STATIC_URL }}bootstrap-image-gallery-3.4.2/css/bootstrap-image-gallery.min.css"></script>
+    <script src="{{ STATIC_URL }}bootstrap-image-gallery-3.4.2/js/bootstrap-image-gallery.min.js"></script>
+
+{% endblock scripts %}
+</body>
+</html>
